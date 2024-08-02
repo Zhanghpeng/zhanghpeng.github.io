@@ -1,4 +1,4 @@
-app.min.jsimport { pwa, baseurl } from '../../_config.yml';
+import { pwa, baseurl } from '../../_config.yml';
 import Toast from 'bootstrap/js/src/toast';
 
 if ('serviceWorker' in navigator) {
