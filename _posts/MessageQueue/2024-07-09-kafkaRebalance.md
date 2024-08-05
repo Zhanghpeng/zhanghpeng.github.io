@@ -1,7 +1,7 @@
 ---
 title: kafka重平衡机制
 author: roc
-date: 2020-08-08 14:10:00 +0800
+date: 2024-07-09 14:10:00 +0800
 categories: [Blog,MQ, kafka]
 tags: [kafka, 重平衡]
 render_with_liquid: true
@@ -124,8 +124,7 @@ Kafka定期自动删除过期位移的条件就是，组要处于Empty状态。
   它会通过心跳请求响应的方式通知组内现有的所有成员，
   强制它们开启新一轮的重平衡。  具体的过程和之前的客户端重平衡流程是一样的。  
   现在，我用一张时序图来说明协调者一端是如何处理新成员入组的。
-
-![img_7.png](../../assets/img/blog/kafka/img_7.png)
+  ![img_7.png](../../assets/img/blog/kafka/img_7.png)
 
 * 组成员主动离组。
   何谓主动离组？就是指消费者实例所在线程或进程调用close()方法主动通知协调者它要退出。
