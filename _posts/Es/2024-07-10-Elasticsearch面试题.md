@@ -14,7 +14,7 @@ render_with_liquid: true
 
 以下是从主分片或者副本分片检索文档的步骤顺序：
 
-![img_24.png](img_24.png)
+![img_24.png](../../assets/img/blog/es/img_24.png)
 
 1. 客户端向 Node 1 发送获取请求。
 2. 节点使用文档的 \_id 来确定文档属于分片 0 。分片 0 的副本分片存在于所有的三个节点上。 在这种情况下，它将请求转发到 Node 2 。
@@ -28,7 +28,7 @@ render_with_liquid: true
 
 使用 mget 取回多个文档的步骤顺序：
 
-![img_26.png](img_26.png)
+![img_26.png](../../assets/img/blog/es/img_26.png)
 
 以下是使用单个 mget 请求取回多个文档所需的步骤顺序：
 
@@ -317,7 +317,7 @@ discovery.zen.minimum_master_nodes；
 
 题外话：获取节点 id 的方法。
 
-![img_2.png](img_2.png)
+![img_2.png](../../assets/img/blog/es/img_2.png)
 
 ## 详细描述一下 Elasticsearch 索引文档的过程
 
@@ -331,7 +331,7 @@ discovery.zen.minimum_master_nodes；
 
 记住官方文档中的这个图。
 
-![img_3.png](img_3.png)
+![img_3.png](../../assets/img/blog/es/img_3.png)
 
 第一步：客户写集群某节点写入数据，发送请求。（如果没有指定路由/协调节点，
 
@@ -402,7 +402,7 @@ fetch 阶段的目的：取数据。
 面试官：想了解你的知识面的广度和深度。
 
 解答：
-![img_4.png](img_4.png)
+![img_4.png](../../assets/img/blog/es/img_4.png)
 Lucene 是有索引和搜索的两个过程，包含索引创建，索引，搜索三个要点。可以
 
 基于这个脉络展开一些。
@@ -489,7 +489,7 @@ Buffer 到 Filesystem Cache 的过程就叫做 refresh；
 
 为 512M）时；
 
-![img_5.png](img_5.png)
+![img_5.png](../../assets/img/blog/es/img_5.png)
 
 补充：关于 Lucene 的 Segement：
 
@@ -559,7 +559,7 @@ Buffer，所以搜索是近实时的。
 
 但是性能会变差。
 
-![img_6.png](img_6.png)
+![img_6.png](../../assets/img/blog/es/img_6.png)
 
 ## Elasticsearch 在部署时，对 Linux 的设置有哪些优化方法？
 
@@ -703,7 +703,7 @@ Marvel 让你可以很简单的通过 Kibana 监控 Elasticsearch。你可以实
 
 ## 介绍下你们电商搜索的整体技术架构。
 
-![img_7.png](img_7.png)
+![img_7.png](../../assets/img/blog/es/img_7.png)
 
 ## 介绍一下你们的个性化搜索方案？
 
@@ -713,7 +713,7 @@ SEE 基于 word2vec 和 Elasticsearch 实现个性化搜索
 
 常用字典数据结构如下所示：
 
-![img_8.png](img_8.png)
+![img_8.png](../../assets/img/blog/es/img_8.png)
 
 Trie 的核心思想是空间换时间，利用字符串的公共前缀来降低查询时间的开销以
 
@@ -725,7 +725,7 @@ Trie 的核心思想是空间换时间，利用字符串的公共前缀来降低
 
 3、每个节点的所有子节点包含的字符都不相同。
 
-![img_9.png](img_9.png)
+![img_9.png](../../assets/img/blog/es/img_9.png)
 
 1、可以看到，trie 树每一层的节点数是 26^i 级别的。所以为了节省空间，我们
 
@@ -763,7 +763,7 @@ Trie 的核心思想是空间换时间，利用字符串的公共前缀来降低
 
 最终取右下角的值即为编辑距离的值 3。
 
-![img_10.png](img_10.png)
+![img_10.png](../../assets/img/blog/es/img_10.png)
 
 对于拼写纠错，我们考虑构造一个度量空间（Metric Space），该空间内任何关
 
@@ -813,7 +813,7 @@ d(neweord, root)的边。递归得与各子节点进行比较，直到没有子�
 
 cart 节点，这样就得到 cape 这个满足条件的结果。
 
-![img_11.png](img_11.png)
+![img_11.png](../../assets/img/blog/es/img_11.png)
 
 ## ES中mapping是什么，你知道es哪些数据类型？
 
@@ -968,7 +968,7 @@ term\_vector：运维参数
 
 ### [图解全文检索](https://zhanghpeng.github.io/posts/Elasticsearch面试题#%E5%9B%BE%E8%A7%A3%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2)
 
-![img_27.png](img_27.png)
+![img_27.png](../../assets/img/blog/es/img_27.png)
 
 ```javascript
  GET index/_search
@@ -1140,18 +1140,18 @@ MySQL（B+Trees）为什么不适合做全文检索
 
 ### [什么是索引](https://zhanghpeng.github.io/posts/Elasticsearch面试题#%E4%BB%80%E4%B9%88%E6%98%AF%E7%B4%A2%E5%BC%95)
 
-![img_12.png](img_12.png)
+![img_12.png](../../assets/img/blog/es/img_12.png)
 数据库的组成
 
-![img_13.png](img_13.png)
+![img_13.png](../../assets/img/blog/es/img_13.png)
 
 B-Trees的数据结构
 
-![img_14.png](img_14.png)
+![img_14.png](../../assets/img/blog/es/img_14.png)
 
 B+Trees的数据结构
 
-![img_15.png](img_15.png)
+![img_15.png](../../assets/img/blog/es/img_15.png)
 
 B+Trees做全文检索的弊端
 索引往往字段很长，如果使用B+trees，树可能很深，IO很可怕
@@ -1167,9 +1167,9 @@ B+Trees做全文检索的弊端
 
 倒排索引的基本数据结构
 
-![img_16.png](img_16.png)
+![img_16.png](../../assets/img/blog/es/img_16.png)
 
-![img_17.png](img_17.png)
+![img_17.png](../../assets/img/blog/es/img_17.png)
 
 ## 倒排表的压缩算法-1：FOR
 
@@ -1177,7 +1177,7 @@ B+Trees做全文检索的弊端
 
 搜索引擎级别的数据量级通常通常在亿级甚至十亿级上，那么也就说如果我们对其建立倒排索引，每个字段被拆分成了若干Term，结果就有可能导致倒排索引的数据量甚至超过了source data，即便我们对倒排索引的检索不必全表扫描，但是太多的数据不管是存储成本还是查询性能可能都不是我们想要的，解决办法就是采用高效的压缩算法和快速的编码和解码算法。
 
-![img_18.png](img_18.png)
+![img_18.png](../../assets/img/blog/es/img_18.png)
 
 ## 倒排表的压缩算法-2：RBM
 
@@ -1185,7 +1185,7 @@ B+Trees做全文检索的弊端
 
 其实上述例子中的数组仍然具有一定的特殊性。因为它是一个稠密数组，可以理解为是一个取值区间波动不大的数组。如果倒排表中出现这样的情况：[1000W, 2001W, 3003W, 5248W, 9548W, 10212W, … , 21Y]，情况将会特别糟糕，因为我们如果还按照FOR的压缩算法对这个数组进行压缩，我们对其计算dealta list，可以发现其每个项与前一个数字的差值仍然是一个很大的数值，也就意味着dealta list的每个元素仍然是需要很多bit来存储的。于是Lucene对于这种稀疏数组采用了另一种压缩算法：RBM（Roaring Bitmaps）
 
-![img_19.png](img_19.png)
+![img_19.png](../../assets/img/blog/es/img_19.png)
 
 这是一个典型的稀疏型数组。在进行数据压缩的时候，其实不管何种方法，我们的最终目的都是把原来的数字转换成足够小的数字以便于我们存储，同时又必须保证压缩后的数据是可以快速解码的。“减法”不好用，这次我们尝试使用“除法”。由于无符号int类型的最大值不超过2 32 ，因此RBM的策略就是把一个int型拆成两个short型的乘机，具体做法是把数组中的每个元素对216取模，因为被除数是232除数是2 16 ，因此商和余数均小于2 16 。其实这种想法是国内开发者强行转化的逻辑，RBM算法本身的设计思路是将原数字的的32个bit分为了高16位和低16位。以原数组中的196658这个id为例，将其转化为二进制结果为 110000000000110010，我们看到其实结果是不足32bits的，但因为每个int型都是有32个bit组成的，不足32bit会在其前面补0，实际其占用的空间大小仍然为32bits，如果这一点不理解，打个比方，公交车有32个座位，无论是否坐满，都是使用了32个座位。最终196658转换成二进制就是0000 0000 0000 0011 0000 0000 0011 0010，前16位就是高16位，转换成十进制就是3，后16位也就是低16位，转换成十进制就是50，3和50分别正好是196658除以63326（2 16 ）的得数和余数，换句话说，int类型的高16位和低16位分别就是其本身对216的商和模。
 
@@ -1193,11 +1193,11 @@ B+Trees做全文检索的弊端
 
 首先ArrayContainer，顾名思义，Container中实际就是一个short类型的数组，其空间占用的曲线如下图中的红色线段，注意这里是线段，因为docs的数量最大不会超过65536，其函数为 y（空间占用）=x（docs 长度） x 2Bytes，当长度达到65536极限值的时候，其占用的大小就是16bit * 65536 / 8 /1024 = 128KB，乘以65536是总bit数，除以8是换算成Byte，除以1024是换算成KB。
 
-![img_20.png](img_20.png)
+![img_20.png](../../assets/img/blog/es/img_20.png)
 
 第二种是BitmapContainer，理解BitmapContainer之前首先要了解什么是bitmap。以往最常见的数据存储方式都是二进制进位存储，比如我们使用8个bit存储数字，如果存十进制0，那二进制就是 0 0 0 0 0 0 0 0，如果存十进制1，那就是 0 0 0 0 0 0 0 1，如果存十进制2，那就是 0 0 0 0 0 0 1 1，用到了第二个bit。这种做法在当前场景下存储效率显然不高，如果我们现在不用bit来存储数据，而是用来作为“标记”，即标记当前bit位置商是否存储了数字，出的数字值就是bit的下标，如图所示，就表示存储了2、3、5、7四个数字，第一行数字的bit仅代表当前index位置上是否存储了数字，如果存储了就记作1，否则记为0，存储的数字值就是其index，并且存储这四个数字只使用了一个字节。
 
-![img_21.png](img_21.png)
+![img_21.png](../../assets/img/blog/es/img_21.png)
 
 不过这种存储方式的问题就是，存储的数字不能包含重复数字，并且Bitmap的大小是固定的，不管是否存储了数值，不管存储了几个值，占用的空间都是恒定的，只和bit的长度有关系。但是我们刚才已经说过，同一个Container中的数字是不会重复的，因此这种数据类型正好适合用这种数据结构作为载体，而因为我们Container的最大容量是65536，因此Bitmap的长度固定为65536，也就是65536个bit，换算成千字节就是8KB，如上面图中的蓝色线段所示，即Lucene的RBM中BitmapContainer固定占用8KB大小的空间，通过对比可以发现，当doc的数量小于4096的时候，使用ArrayContainer更加节省空间，当doc数量大于4096的时候，使用BitmapContainer更加节省空间。
 
@@ -1211,9 +1211,9 @@ B+Trees做全文检索的弊端
 
 Term Dictionary是字典序非重复的K-V结构的，而通常搜索引擎级别的倒排索引，Term Dictionary动辄以“亿”起步，这势必要求我们在做数据存储时对其数据结构有极其高的要求。假设下图中英汉词典片段就是我们要存储的词项字典，遵循“通用最小化算法”对其进行数据压缩，我们就必须要考虑如何以最小的代价换区最高的效率。通过观察不难发现，无论任何一个Term，无外乎由26个英文字母组成，这也就意味越多的词项就会造成的越多的数据“重复”。这里所说的重复指的是词项之间会有很多个公共部分，如“abandon”和“abandonment”就共享了公共前缀“abandont”。我们是否可以像Java开发过程中对代码的封装那样，重复利用这一部分公共内容呢？答案是肯定的！Lucene在存储这种有重复字符的数据的时候，只会存储一次，也就是哪怕有一亿个以abandon为前缀的词项，“abandom”这个前缀也只会存储一次。这里就用到了一种我们经常用到的一种数据结构：Trie即字典树，也叫前缀树（Prefix Tree）。
 
-![img_22.png](img_22.png)
+![img_22.png](../../assets/img/blog/es/img_22.png)
 
 下面我们以Term Dictionary：（msb、msbtech、msn、wltech）为例，演示一下Trie是如何存储Term Dictionary的。
 
 
-![img_23.png](img_23.png)
+![img_23.png](../../assets/img/blog/es/img_23.png)
