@@ -5,6 +5,7 @@ date: 2024-07-10 14:10:00 +0800
 categories: [Blog,ES, Elasticsearch核心知识点]
 tags: [es, elasticsearch ]
 render_with_liquid: true
+from: https://golangguide.top/
 ---
 
 # elasticSearch 是什么？工作原理是怎么样的？
