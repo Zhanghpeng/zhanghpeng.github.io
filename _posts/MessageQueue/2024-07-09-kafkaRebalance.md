@@ -3,7 +3,7 @@ title: kafka重平衡机制
 author: roc
 date: 2024-07-09 14:10:00 +0800
 categories: [Blog,MQ, kafka]
-tags: [kafka, 重平衡]
+tags: [kafka, kafka重平衡]
 render_with_liquid: true
 from: 本文来自 [极客时间 Kafka核心技术与实战](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Flinks.jianshu.com%2Fgo%3Fto%3Dhttps%253A%252F%252Ftime.geekbang.org%252Fcolumn%252Fintro%252F100029201&source=article&objectId=1530498)  这段时间有看 极客时间的这个课程,  这里仅以分享的角度来做个笔记。  那么本文将涉及到以下几个知识点：
 
